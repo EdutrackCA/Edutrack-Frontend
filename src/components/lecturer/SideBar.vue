@@ -4,10 +4,10 @@
     
     <v-divider style="border-color: white"></v-divider>
     <v-list color="transparent" class="mt-10">
-      <v-list-item class="" link to="/student/dashboard"><v-icon>mdi-view-dashboard</v-icon>Dashboard</v-list-item>
+      <v-list-item class="" link to="/lecturer/dashboard"><v-icon>mdi-view-dashboard</v-icon>Dashboard</v-list-item>
       <v-list-item class="mt-6" link to="#"><v-icon>mdi-bookshelf</v-icon>My Courses</v-list-item>
       <v-list-item class="mt-6" link to="#"><v-icon>mdi-book</v-icon>Assignments</v-list-item>
-      <v-list-item class="mt-6" link to="/student/performance"><v-icon>mdi-chart-waterfall</v-icon>Performance</v-list-item>
+      <v-list-item class="mt-6" link to="#"><v-icon>mdi-chart-waterfall</v-icon>Performance</v-list-item>
     </v-list>
     <template v-slot:append>
       <div class="pa-2">

@@ -38,7 +38,7 @@
 
           <!-- lecturerBtn -->
           <v-col cols="4" class="text-center" v-show="lecturerBtn">
-            <v-card class="pa-5" flat link @click="lecturerForm=true , studentBtn=false , lecturerBtn=false" style="background-color:transparent">
+            <v-card class="pa-5" flat link to="/lecturer/dashboard" style="background-color:transparent">
               <v-avatar size="120">
                 <v-img src="@/assets/profile.jpg"></v-img>
               </v-avatar>
@@ -69,30 +69,6 @@
             </v-row>
             <v-action class="px-10">
               <v-btn text block to="/student/dashboard" v-model="submit">SignUp</v-btn>
-            </v-action>
-          </v-form>
-          </v-col>
-
-          <!-- LecturerForm -->
-          <v-col cols="12" sm="8" class="px-10" v-show="lecturerForm">
-          <v-form>
-            <v-row no-gutters>
-              <v-col cols="12" sm="12">
-                <v-text-field dense solo placeholder="Name" type="text" v-model="lecturerName" required></v-text-field>
-            <v-text-field dense solo placeholder="Email" type="email" v-model="lecturerMail" required></v-text-field>
-            <v-text-field dense solo placeholder="Institution Name" type="text" v-model="lecturerInstitution" required></v-text-field>
-              </v-col>
-
-              <v-col cols="12" sm="12">
-                <v-text-field dense solo  placeholder="Mobile Number" type="text" v-model="phone" optional></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field dense solo placeholder="Password" type="password" v-model="studentPassword" required></v-text-field>
-            <v-text-field dense solo placeholder="Confirm Password" type="password" v-model="studentPassword" required></v-text-field>
-              </v-col>
-            </v-row>
-            <v-action class="px-10">
-              <v-btn text block to="/lecturer/dashboard" v-model="submit">SignUp</v-btn>
             </v-action>
           </v-form>
           </v-col>
