@@ -39,7 +39,7 @@
       height="60px"
     >
       <div class="d-flex align-center">
-        <h3>Hello John Doe</h3>
+        <h3>Hello, Ebenezer</h3>
       </div>
 
       <v-spacer></v-spacer>
