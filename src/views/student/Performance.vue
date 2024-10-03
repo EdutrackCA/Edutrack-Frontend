@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import SideBar from "@/components/SideBar.vue";
-import BarChart from '@/components/BarChart.vue';
-import PieChart from '@/components/PieChart.vue';
+import NavBar from "@/components/student/NavBar.vue";
+import SideBar from "@/components/student/SideBar.vue";
+import BarChart from '@/components/student/BarChart.vue';
+import PieChart from '@/components/student/PieChart.vue';
 export default {
   components: { SideBar, NavBar, BarChart, PieChart },
   data() {

@@ -2,8 +2,17 @@
   <div>
     <v-row>
       <!-- Left Panel -->
-      <v-col cols="4" class="left-panel pt-10 pa-5" style="background-color:#01427a">
-        <v-card flat height="97vh" class="card" style="background-color:#01427a; color:white">
+      <v-col
+        cols="4"
+        class="left-panel pt-10 pa-5"
+        style="background-color: #01427a"
+      >
+        <v-card
+          flat
+          height="97vh"
+          class="card"
+          style="background-color: #01427a; color: white"
+        >
           <v-row>
             <v-col>
               <h1 class="text-center">Track-CA</h1>
@@ -28,7 +37,17 @@
         <!-- studentBtn -->
         <v-row justify="center" class="mt-5">
           <v-col cols="4" class="text-center" v-show="studentBtn">
-            <v-card class="pa-5" flat link style="background-color:transparent" @click="studentForm=true , studentBtn=false , lecturerBtn=false">
+            <v-card
+              class="pa-5"
+              flat
+              link
+              style="background-color: transparent"
+              @click="
+                (studentForm = true),
+                  (studentBtn = false),
+                  (lecturerBtn = false)
+              "
+            >
               <v-avatar size="120">
                 <v-img src="@/assets/profile.jpg"></v-img>
               </v-avatar>
@@ -38,66 +57,172 @@
 
           <!-- lecturerBtn -->
           <v-col cols="4" class="text-center" v-show="lecturerBtn">
-            <v-card class="pa-5" flat link @click="lecturerForm=true , studentBtn=false , lecturerBtn=false" style="background-color:transparent">
+            <v-card
+              class="pa-5"
+              flat
+              link
+              @click="
+                (studentForm = false),
+                  (studentBtn = false),
+                  (lecturerBtn = false),
+                  (lecturerForm = true)
+              "
+              style="background-color: transparent"
+            >
               <v-avatar size="120">
                 <v-img src="@/assets/profile.jpg"></v-img>
               </v-avatar>
-              <h4 class="mt-5 blue--text text--darken-4">Sign up as Lecturer</h4>
+              <h4 class="mt-5 blue--text text--darken-4">
+                Sign up as Lecturer
+              </h4>
             </v-card>
           </v-col>
 
-            <!-- StudentForm -->
+          <!-- StudentForm -->
           <v-col cols="12" sm="8" class="px-10" v-show="studentForm">
-          <v-form>
-            <v-row no-gutters>
-              <v-col cols="12" sm="12">
-                <v-text-field dense solo placeholder="Name" type="text" v-model="studentName" required></v-text-field>
-            <v-text-field dense solo placeholder="Email" type="email" v-model="studentMail" required></v-text-field>
-            <v-text-field dense solo placeholder="Institution Name" type="text" v-model="studentInstitution" required></v-text-field>
-              </v-col>
+            <v-form>
+              <v-row no-gutters>
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Name"
+                    type="text"
+                    v-model="studentName"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Email"
+                    type="email"
+                    v-model="studentMail"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Institution Name"
+                    type="text"
+                    v-model="studentInstitution"
+                    required
+                  ></v-text-field>
+                </v-col>
 
-              <v-col cols="12" sm="6">
-                <v-text-field dense solo placeholder="Matric No/Registration No" type="text" v-model="matricNo" required></v-text-field>
-              </v-col>
-              <v-col cols="12" sm="6">
-                <v-text-field dense solo  placeholder="Mobile Number" type="text" v-model="phone" optional></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field dense solo placeholder="Password" type="password" v-model="studentPassword" required></v-text-field>
-            <v-text-field dense solo placeholder="Confirm Password" type="password" v-model="studentPassword" required></v-text-field>
-              </v-col>
-            </v-row>
-            <v-action class="px-10">
-              <v-btn text block to="/student/dashboard" v-model="submit">SignUp</v-btn>
-            </v-action>
-          </v-form>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Matric No/Registration No"
+                    type="text"
+                    v-model="matricNo"
+                    required
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" sm="6">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Mobile Number"
+                    type="text"
+                    v-model="phone"
+                    optional
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Password"
+                    type="password"
+                    v-model="studentPassword"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Confirm Password"
+                    type="password"
+                    v-model="studentPassword"
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-action class="px-10">
+                <v-btn text block to="/student/course-form" v-model="submit"
+                  >SignUp</v-btn
+                >
+              </v-action>
+            </v-form>
           </v-col>
 
-          <!-- LecturerForm -->
+          <!-- Lecturer Form -->
           <v-col cols="12" sm="8" class="px-10" v-show="lecturerForm">
-          <v-form>
-            <v-row no-gutters>
-              <v-col cols="12" sm="12">
-                <v-text-field dense solo placeholder="Name" type="text" v-model="lecturerName" required></v-text-field>
-            <v-text-field dense solo placeholder="Email" type="email" v-model="lecturerMail" required></v-text-field>
-            <v-text-field dense solo placeholder="Institution Name" type="text" v-model="lecturerInstitution" required></v-text-field>
-              </v-col>
+            <v-form>
+              <v-row no-gutters>
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Name"
+                    type="text"
+                    v-model="lecturerName"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Email"
+                    type="email"
+                    v-model="lecturerMail"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Institution Name"
+                    type="text"
+                    v-model="lecturerInstitution"
+                    required
+                  ></v-text-field>
+                </v-col>
 
-              <v-col cols="12" sm="12">
-                <v-text-field dense solo  placeholder="Mobile Number" type="text" v-model="phone" optional></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field dense solo placeholder="Password" type="password" v-model="studentPassword" required></v-text-field>
-            <v-text-field dense solo placeholder="Confirm Password" type="password" v-model="studentPassword" required></v-text-field>
-              </v-col>
-            </v-row>
-            <v-action class="px-10">
-              <v-btn text block to="/lecturer/dashboard" v-model="submit">SignUp</v-btn>
-            </v-action>
-          </v-form>
+                <v-col cols="12" sm="12">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Mobile Number"
+                    type="text"
+                    v-model="phone"
+                    optional
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12">
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Password"
+                    type="password"
+                    v-model="lecturerPassword"
+                    required
+                  ></v-text-field>
+                  <v-text-field
+                    dense
+                    solo
+                    placeholder="Confirm Password"
+                    type="password"
+                    v-model="lecturerPassword"
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-action class="px-10">
+                <v-btn text block to="/lecturer/dashboard" v-model="submit"
+                  >SignUp</v-btn
+                >
+              </v-action>
+            </v-form>
           </v-col>
-
-
         </v-row>
       </v-col>
     </v-row>
@@ -112,7 +237,7 @@ export default {
       studentBtn: true,
       lecturerBtn: true,
       lecturerForm: false,
-    }
+    };
   },
-}
+};
 </script>

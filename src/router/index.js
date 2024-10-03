@@ -12,15 +12,26 @@ const routes = [
   // },
 
   {
-    path: '/login',
+    path: '/student/login',
     name: 'login',
-    component: () => import('../views/LoginView.vue')
+    component: () => import('../views/student/Login.vue')
   },
 
   {
     path: '/',
-    name: 'studentSignup',
+    name: 'SignupView',
     component: () => import('../views/SignupView.vue')
+  },
+
+  {
+    path: '/student/course-form',
+    name: 'uploadCourse',
+    component: () => import('../views/student/UploadCourse.vue')
+  },
+  {
+    path: '/student/terms-and-condition',
+    name: 'termsCondition',
+    component: () => import('../views/student/TermsCondition.vue')
   },
 
   {

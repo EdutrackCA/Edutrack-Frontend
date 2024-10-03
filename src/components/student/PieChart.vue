@@ -16,8 +16,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4", "Cummulative"],
-        datasets: [{ data: [40, 20, 12, 40, 50],
+        labels: ["Assignment", "Attendance", "Mini test", "Major test", "Mini project", "Major project"],
+        datasets: [{ data: [40, 20, 12, 40, 50, 44],
             backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16']
          }],
       },
