@@ -48,7 +48,7 @@
                     solo
                     placeholder="Matric No/Registration No"
                     type="text"
-                    v-model="lecturerName"
+                    v-model="MatricNo"
                     required
                   ></v-text-field>
                   <v-text-field
@@ -56,17 +56,17 @@
                     solo
                     placeholder="Password"
                     type="password"
-                    v-model="lecturerPassword"
+                    v-model="Password"
                     required
                   ></v-text-field>
                 </v-col>
                 <v-col>
-                  
+
                 </v-col>
                 </v-row>
               <v-action class="px-10">
-                <v-btn text block to="/lecturer/dashboard" v-model="submit"
-                  >SignUp</v-btn
+                <v-btn text block to="/student/dashboard" v-model="submit"
+                  >Login</v-btn
                 >
               </v-action>
             </v-form>
