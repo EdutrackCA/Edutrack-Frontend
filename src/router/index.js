@@ -41,16 +41,30 @@ const routes = [
   },
 
   {
+    path: '/student/performance',
+    name: 'studentPerformance',
+    component: () => import('../views/student/Performance.vue')
+  },
+
+  {
+    path: '/lecturer/terms-and-condition',
+    name: 'termsCondition',
+    component: () => import('../views/lecturer/TermsCondition.vue')
+  },
+
+  {
+    path: '/lecturer/login',
+    name: 'login',
+    component: () => import('../views/lecturer/Login.vue')
+  },
+
+  {
     path: '/lecturer/dashboard',
     name: 'lecturerDashboard',
     component: () => import('../views/lecturer/DashBoard.vue')
   },
 
-  {
-    path: '/student/performance',
-    name: 'studentPerformance',
-    component: () => import('../views/student/Performance.vue')
-  },
+
 ]
 
 const router = new VueRouter({

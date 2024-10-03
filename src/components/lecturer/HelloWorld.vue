@@ -10,8 +10,13 @@
               <h3 class="mt-5">Announcement</h3>
             </v-col>
             <v-spacer></v-spacer>
-            <v-col cols="12" sm="3" class="text-right">
-              <Upload />
+            <v-col cols="12" sm="3" class="text-right mt-5">
+              <!-- <Upload /> -->
+              <v-btn>
+                Upload Document
+                <v-icon v-show="open" @click="open=false, close=true">mdi-chevron-down</v-icon>
+                <v-icon v-show="close" @click="open=true, close=false">mdi-chevron-up</v-icon>
+              </v-btn>
             </v-col>
           </v-row>
         </v-col>
@@ -69,12 +74,14 @@
 import NavBar from "./NavBar.vue";
 import Schedule from './Schedule.vue';
 import SideBar from "./SideBar.vue";
-import Upload from "./Upload.vue";
+// import Upload from "./Upload.vue";
 export default {
-  components: { SideBar, NavBar, Upload, Schedule  },
+  components: { SideBar, NavBar, Schedule  },
   data() {
        return {
       value: 65,
+      open:true,
+      close:false
     };
   },
 };

@@ -1,20 +1,21 @@
 <template>
+ <div>
     <v-file-input
-      v-model="files"
-      :show-size="1000"
-      color="deep-purple-accent-4"
-      label="Upload Document"
-      prepend-icon="mdi-paperclip"
-      variant="outlined"
-      counter
-      multiple
-    >
-    </v-file-input>
-  </template>
-  <script>
-  export default {
-    data: () => ({
-      files: [],
-    }),
-  }
+      @click="uploadBtn = false"
+      prepend-icon=""
+      flat
+      solo
+      background-color="transparent"
+      dense
+      style="position: absolute; z-index: 100; margin-top: -6px; width: 500px"
+    ></v-file-input>
+    <v-btn v-show="uploadBtn" class="">Choose a file</v-btn>
+  </div>
+</template>
+<script>
+export default {
+  data: () => ({
+    uploadBtn: true,
+  }),
+};
 </script>
