@@ -64,6 +64,8 @@ const routes = [
     component: () => import('../views/lecturer/DashBoard.vue')
   },
 
+  
+
 
 ]
 

@@ -29,7 +29,7 @@
       </v-col>
 
       <!-- Right Panel -->
-      <v-col cols="8" class="right-panel pt-10">
+      <v-col cols="8" class="right-panel py-10">
         <v-row justify="center px-5">
           <v-col cols="12" sm="12">
             <h1 class="mt-5">Terms and Conditions</h1>
@@ -42,7 +42,7 @@
               <h3>Terms and Conditions for Track-CA</h3>
               <h4 class="mt-2 font-weight-regular">
                 1. Introduction These Terms and Conditions govern your use of
-                our School Management Application (EduTrack). By accessing or
+                our School Management Application (Track-CA). By accessing or
                 using the Application, you agree to be bound by these terms. If
                 you do not agree to these terms, please refrain from using the
                 Application.
@@ -65,7 +65,7 @@
             <h4 class="mt-2 font-weight-regular">
                 4. Intellectual Property The Application and its
                 contents, including but not limited to the software, design, and
-                trademarks, are the property of [Your Company Name] and are
+                trademarks, are the property of Track-CA and are
                 protected by copyright and other intellectual property laws. 
             </h4>
             <h4 class="mt-2 font-weight-regular">
@@ -84,7 +84,7 @@
           </v-col>
         </v-row>
         <v-row justify="center">
-            <v-checkbox label="I agree to the terms and conditions of EduTrack"></v-checkbox>
+            <v-checkbox label="I agree to the terms and conditions of Track-CA"></v-checkbox>
         </v-row>
         <v-row justify="center">
           <v-btn dark text width="30vw" class="blue" to="/lecturer/login">I agree</v-btn>
