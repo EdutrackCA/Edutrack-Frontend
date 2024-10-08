@@ -1,4 +1,5 @@
 <template>
+  <div>
   <v-row class="fill-height">
     <v-col>
       <v-sheet height="600">
@@ -12,6 +13,7 @@
       </v-sheet>
     </v-col>
   </v-row>
+</div>
 </template>
 <script>
 import { useDate } from "vuetify";
