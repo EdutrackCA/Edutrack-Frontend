@@ -69,7 +69,61 @@
       <v-col cols="12" sm="12" class="text-left">
         <h3>Course Overall performance</h3>
       </v-col>
-      <v-col cols="12" sm="3">
+      <v-col cols="12" sm="4">
+        <v-card class="pa-5 blue darken-2" dark>
+          <v-card-title>ICT 504</v-card-title>
+          <v-card-text class="text-left"
+            >Introduction To Neural Network</v-card-text
+          >
+          <v-row class="mt-10">
+            <v-col cols="12" sm="6">
+              <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <div class="text-center">
+                <v-progress-circular
+                  :model-value="value"
+                  :rotate="360"
+                  :size="100"
+                  :width="15"
+                  color="white"
+                >
+                  {{ value }} %
+                </v-progress-circular>
+              </div>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="4">
+        <v-card class="pa-5 blue darken-2" dark>
+          <v-card-title>ICT 504</v-card-title>
+          <v-card-text class="text-left"
+            >Introduction To Neural Network</v-card-text
+          >
+          <v-row class="mt-10">
+            <v-col cols="12" sm="6">
+              <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+            </v-col>
+            <v-col cols="12" sm="6">
+              <div class="text-center">
+                <v-progress-circular
+                  :model-value="value"
+                  :rotate="360"
+                  :size="100"
+                  :width="15"
+                  color="white"
+                >
+                  {{ value }} %
+                </v-progress-circular>
+              </div>
+            </v-col>
+          </v-row>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="4">
         <v-card class="pa-5 blue darken-2" dark>
           <v-card-title>ICT 504</v-card-title>
           <v-card-text class="text-left"

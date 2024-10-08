@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-row>
+    <div class="d-lg-none">
+      <SignUp />
+    </div>
+    <v-row class="d-lg-flex d-sm-none ">
       <!-- Left Panel -->
       <v-col
         cols="4"
@@ -230,7 +233,12 @@
 </template>
 
 <script>
+import SignUp from '@/components/mobile/signUp.vue';
+
 export default {
+  components: {
+    SignUp,
+    },
   data() {
     return {
       studentForm: false,
