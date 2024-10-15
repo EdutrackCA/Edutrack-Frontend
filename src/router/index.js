@@ -5,16 +5,16 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'SignupView',
-  //   component: SignupView
-  // },
-
-  {
+   {
     path: '/student/login',
     name: 'login',
     component: () => import('../views/student/Login.vue')
+  },
+
+  {
+    path: '/mobile/student/login',
+    name: 'mobLogin',
+    component: () => import('../views/student/mobile/LogIn.vue')
   },
 
   {
@@ -41,9 +41,21 @@ const routes = [
   },
 
   {
+    path: '/mobile/student/dashboard',
+    name: 'mobstudentDashboard',
+    component: () => import('../views/student/mobile/DashBoard.vue')
+  },
+
+  {
     path: '/student/performance',
     name: 'studentPerformance',
     component: () => import('../views/student/Performance.vue')
+  },
+
+  {
+    path: '/mobile/student/performance',
+    name: 'mobstudentPerformance',
+    component: () => import('../views/student/mobile/mobPerf.vue')
   },
 
   {

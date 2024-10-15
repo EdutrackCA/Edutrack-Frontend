@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="d-lg-none">
+    <div class="d-sm-flex d-md-none d-lg-none">
       <SignUp />
     </div>
-    <v-row class="d-lg-flex d-sm-none ">
+    <v-row class="d-none .d-sm-none d-lg-flex">
       <!-- Left Panel -->
       <v-col
         cols="4"
@@ -233,7 +233,7 @@
 </template>
 
 <script>
-import SignUp from '@/components/mobile/signUp.vue';
+import SignUp from '@/components/student/mobile/signUp.vue';
 
 export default {
   components: {

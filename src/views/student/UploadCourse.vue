@@ -1,6 +1,12 @@
 <template>
   <div>
-    <v-row>
+    <!-- Mobile -->
+    <div class="d-md-none d-lg-none">
+    <uploadCourse />  
+    </div>
+
+    <!-- Desktop -->
+    <v-row class="d-none d-sm-none d-md-flex d-lg-flex">
       <!-- Left Panel -->
       <v-col
         cols="4"
@@ -58,7 +64,11 @@
 </template>
 
 <script>
+import uploadCourse from '@/components/student/mobile/uploadCourse.vue';
 export default {
+  components: {
+    uploadCourse,
+    },
   data() {
     return {
       studentForm: false,

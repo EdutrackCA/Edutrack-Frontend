@@ -22,7 +22,7 @@ export default {
         datasets: [ { data: [40, 20, 12, 40, 50],  backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'] } ]
       },
       chartOptions: {
-        responsive: true
+        responsive: true,
       }
     }
   }
