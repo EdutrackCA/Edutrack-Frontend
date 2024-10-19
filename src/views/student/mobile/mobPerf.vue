@@ -1,9 +1,14 @@
 <template>
   <div>
     <side-bar />
+   
     <v-container>
       <v-layout row class="pa-5">
+       <v-flex xs12 class="text-center">
+        <NavBar />
+       </v-flex>
         <v-flex xs12>
+         
             <h2>Performance Tracking</h2>
         </v-flex>
       </v-layout>
@@ -60,13 +65,15 @@
 
 <script>
 import SideBar from '@/components/student/mobile/SideBar.vue'
+import NavBar from '@/components/student/mobile/NavBar.vue'
 import BarChart from '@/components/student/BarChart.vue'
 import PieChart from '@/components/student/PieChart.vue'
 export default {
   components : {
     SideBar,
     BarChart,
-    PieChart
+    PieChart,
+    NavBar
   }
 }
 </script>
