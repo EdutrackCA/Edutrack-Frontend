@@ -1,47 +1,52 @@
 <template>
   <div>
-    <v-container>
-      <v-layout row wrap>
-        <!-- left panel -->
-        <v-flex xs5>
+    <v-container fluid class="pa-0">
+      <v-layout fill-height wrap>
+       <!-- left panel -->
+       <v-flex xs4>
           <v-card
+          rounded="0"
+            scrollable
             flat
             height="100vh"
             class="card pa=5"
             style="background-color: #01427a; color: white"
           >
-            <v-row>
-              <v-col class="pt-10">
-                <h2 class="text-center">Track-CA</h2>
-              </v-col>
-            </v-row>
-            <v-row
+            <v-layout>
+              <v-flex xs12 class="py-10">
+                <h3 class="text-center">Track-CA</h3>
+              </v-flex>
+            </v-layout>
+            <v-layout
               align="center"
-              class="justify-center mt-15 pt-15 text-center px-8"
+              class="justify-center mt-15 pt-15 text-center px-5"
             >
+            <v-flex xs12>
               <v-img class="mt-15" src="@/assets/signup.png"></v-img>
-              <h5>
+              <h5 class="font-weight-regular">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
               </h5>
-            </v-row>
+            </v-flex>
+            </v-layout>
           </v-card>
         </v-flex>
 
         <!-- Right Panel -->
         <v-flex xs7>
-            <v-card class="pa-10" flat></v-card>
-          <v-row justify="center pa-1 pl-2">
-            <v-col cols="12" sm="12">
-              <h2 class="mt-15">Course Form Upload</h2>
-              <h5 class="font-weight-medium">
+            
+          <v-layout class="pt-15">
+            <v-flex xs12 class="pa-3">
+              <h3 class="mt-15">Course Form Upload</h3>
+              <h5 class="font-weight-regular">
                 Upload a file of your course form
               </h5>
-            </v-col>
-          </v-row>
+            </v-flex>
+          </v-layout>
 
           <!-- studentBtn -->
-          <v-row justify="center" class="mt-10">
-            <v-card width="200px" class="pa-7" flat>
+          <v-layout class="pt-15">
+            <v-flex xs12 class="ma-9">
+              <v-card width="200px" class="pa-7" flat>
               <v-file-input
                 @click="uploadBtn = false"
                 prepend-icon=""
@@ -58,17 +63,19 @@
               ></v-file-input>
               <v-btn v-show="uploadBtn" class="">Choose a file</v-btn>
             </v-card>
-          </v-row>
+            </v-flex>
+          </v-layout>
 
-          <v-row justify="center" class="mt-10">
-            <v-btn
+          <v-layout column justify="center" class="mt-10">
+            <v-flex xs12 class="text-center">
+              <v-btn
               text
-              width="30vw"
               class="grey lighten-3 mt-15"
               to="/student/terms-and-condition"
               >Upload</v-btn
             >
-          </v-row>
+            </v-flex>
+          </v-layout>
         </v-flex>
       </v-layout>
     </v-container>

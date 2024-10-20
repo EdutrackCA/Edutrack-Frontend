@@ -1,5 +1,5 @@
 <template>
-  <v-container class="pa-3 pt-8">
+  <v-container class="pa-3 pt-8 pa-0" fluid>
     <SideBar />
     <v-layout class="text-center">
       <NavBar />
@@ -74,37 +74,37 @@
 
       <v-layout> 
         <!-- Assignments -->
-        <v-flex xs12>
+        <v-flex xs12 class="mt-5">
           <h3>Assignments</h3>
-          <v-card outlined class="pa-5 mt-5" style="border: 1px solid blue">
+          <v-card outlined class="pa-3 mt-5 scrollable-card" style="border: 1px solid blue">
             <v-layout v-for="(item, index) in items" :key="index">
-              <v-flex xs8>
-                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+              <v-flex xs12>
+                <v-card class="py-3 blue lighten-1 mt-2 scrollable-content" dark link flat>
                   <v-layout class="pa-2">
                     <v-flex xs2>
                       <v-card class="text-center blue darken-4 pa-2" flat>
-                        <h3>ICT 504</h3>
+                        <h5>ICT 504</h5>
                       </v-card>
                     </v-flex>
 
-                    <v-flex xs6>
-                      <v-layout no-gutters>
+                    <v-flex xs9 class="ma-3 ml-4">
+                      <v-layout row>
                         <v-flex xs12>
-                          <h3>Introduction to Neural Network</h3>
+                          <h4>Introduction to Neural Network</h4>
                         </v-flex>
-                        <v-flex xs6>
-                          <h5 class="green--text darken-4">Date Assigned</h5>
+                        <v-flex xs4>
+                          <h6 class="black--text darken-5 font-weight-light">Date Assigned</h6>
                           <h6>31-03-2024</h6>
                         </v-flex>
-                        <v-flex xs6>
-                          <h5 class="red--text darken-4">Submission date</h5>
+                        <v-flex xs5>
+                          <h6 class="black--text darken-4 font-weight-light">Submission date</h6>
                           <h6>02-04-2024</h6>
                         </v-flex>
-                      </v-layout>
-                    </v-flex>
 
-                    <v-flex xs6 class="text-right pt-7">
-                      <v-chip><span>not submitted</span></v-chip>
+                        <v-flex xs3>
+                      <v-chip light class="extra-small-chip">not submitted</v-chip>
+                    </v-flex>
+                      </v-layout>
                     </v-flex>
                   </v-layout>
                 </v-card>
@@ -170,5 +170,13 @@ export default {
 .scrollable-content {
   max-height: 100%; /* Ensures content takes up available height */
   overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.extra-small-chip {
+  font-size: 8px; /* Adjust font size */
+  height: 15px; /* Set a smaller height */
+  padding: 0 6px; /* Reduce padding */
+  border-radius: 12px; /* Adjust border-radius for a rounded look */
+  color: red;
 }
 </style>
