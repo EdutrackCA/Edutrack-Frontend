@@ -69,7 +69,7 @@
           >
           <v-row class="mt-10">
             <v-col cols="12" sm="6">
-              <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+              <v-card-text class="text-left">Engr. Charles</v-card-text>
             </v-col>
             <v-col cols="12" sm="6">
               <div class="text-center">
@@ -96,7 +96,7 @@
           >
           <v-row class="mt-10">
             <v-col cols="12" sm="6">
-              <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+              <v-card-text class="text-left">Engr. Charles</v-card-text>
             </v-col>
             <v-col cols="12" sm="6">
               <div class="text-center">
@@ -123,7 +123,7 @@
           >
           <v-row class="mt-10">
             <v-col cols="12" sm="6">
-              <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+              <v-card-text class="text-left">Engr. Charles</v-card-text>
             </v-col>
             <v-col cols="12" sm="6">
               <div class="text-center">
