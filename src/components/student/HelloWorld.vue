@@ -15,7 +15,7 @@
             >
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
-                <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+                <v-card-text class="text-left">Engr. Charles</v-card-text>
               </v-col>
               <v-col cols="12" sm="6">
                 <div class="text-center">
@@ -42,7 +42,7 @@
             >
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
-                <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+                <v-card-text class="text-left">Engr. Charles</v-card-text>
               </v-col>
               <v-col cols="12" sm="6">
                 <div class="text-center">
@@ -69,7 +69,7 @@
             >
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
-                <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+                <v-card-text class="text-left">Engr. Charles</v-card-text>
               </v-col>
               <v-col cols="12" sm="6">
                 <div class="text-center">
@@ -93,7 +93,7 @@
         <!-- recent activities -->
         <v-col cols="12" sm="4">
           <h3>Recent Activities</h3>
-          <v-card outlined class="pa-5 mt-5" style="border: 1px solid blue">
+          <v-card outlined class="pa-5 mt-5 scrollable-card" style="border: 1px solid blue">
             <v-row>
               <v-col cols="12" sm="12">
                 <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
@@ -127,6 +127,30 @@
                     </v-col>
                   </v-row>
                 </v-card>
+                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+                  <v-row>
+                    <v-col cols="12" sm="12">
+                      <h3>Submitted ICT 502 Assignment</h3>
+                    </v-col>
+                  </v-row>
+                </v-card>
+
+                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+                  <v-row>
+                    <v-col cols="12" sm="12">
+                      <h3>Submitted ICT 502 Assignment</h3>
+                    </v-col>
+                  </v-row>
+                </v-card>
+
+                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+                  <v-row>
+                    <v-col cols="12" sm="12">
+                      <h3>Submitted ICT 502 Assignment</h3>
+                    </v-col>
+                  </v-row>
+                </v-card>
+
                 <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
                   <v-row>
                     <v-col cols="12" sm="12">
@@ -142,7 +166,7 @@
         <!-- Assignments -->
         <v-col cols="12" sm="8">
           <h3>Assignments</h3>
-          <v-card outlined class="pa-5 mt-5" style="border: 1px solid blue">
+          <v-card outlined class="pa-5 mt-5 scrollable-card" style="border: 1px solid blue">
             <v-row>
               <v-col cols="12" sm="12">
                 <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
@@ -217,6 +241,68 @@
 
             <v-row>
               <v-col cols="12" sm="12">
+                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+                  <v-row class="pa-2">
+                    <v-col cols="12" sm="2">
+                      <v-card class="text-center blue darken-4 pa-2" flat>
+                        <h3>ICT 504</h3>
+                      </v-card>
+                    </v-col>
+
+                    <v-col cols="12" sm="6">
+                      <v-row no-gutters>
+                        <v-col cols="12" sm="12">
+                          <h3>Introduction to Neural Network</h3>
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                          <h5 class="green--text darken-4">Date Assigned</h5>
+                          <h6>31-03-2024</h6>
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                          <h5 class="red--text darken-4">Submission date</h5>
+                          <h6>02-04-2024</h6>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col cols="12" sm="3" class="text-right pt-7">
+                      <v-chip><span>not submitted</span></v-chip>
+                    </v-col>
+
+                  </v-row>
+                </v-card>
+
+                <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
+                  <v-row class="pa-2">
+                    <v-col cols="12" sm="2">
+                      <v-card class="text-center blue darken-4 pa-2" flat>
+                        <h3>ICT 504</h3>
+                      </v-card>
+                    </v-col>
+
+                    <v-col cols="12" sm="6">
+                      <v-row no-gutters>
+                        <v-col cols="12" sm="12">
+                          <h3>Introduction to Neural Network</h3>
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                          <h5 class="green--text darken-4">Date Assigned</h5>
+                          <h6>31-03-2024</h6>
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                          <h5 class="red--text darken-4">Submission date</h5>
+                          <h6>02-04-2024</h6>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+
+                    <v-col cols="12" sm="3" class="text-right pt-7">
+                      <v-chip><span>not submitted</span></v-chip>
+                    </v-col>
+
+                  </v-row>
+                </v-card>
+
                 <v-card class="pa-5 py-3 blue lighten-1 mt-2" dark link flat>
                   <v-row class="pa-2">
                     <v-col cols="12" sm="2">

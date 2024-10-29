@@ -101,7 +101,7 @@
                     <p>
                       10. Governing Law These Terms and Conditions shall be
                       governed by and construed in accordance with the laws of
-                      [Jurisdiction].
+                      The Federal Republic of Nigeria.
                     </p>
                     <p>
                       11. Changes We may update these Terms and Conditions from

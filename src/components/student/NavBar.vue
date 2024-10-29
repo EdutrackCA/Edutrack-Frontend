@@ -14,7 +14,7 @@
       <v-spacer></v-spacer>
 
       <div>
-        <v-text-field style="width:550px" class="mt-6" rounded="" dense filled background-color="white" flat></v-text-field>
+        <v-text-field placeholder="search" style="width:550px" class="mt-6" rounded="" dense filled background-color="white" light flat></v-text-field>
       </div>
 
       <v-spacer></v-spacer>

@@ -6,15 +6,7 @@
       <v-col cols="12" sm="6">
         <h2>Performance Tracking</h2>
       </v-col>
-      <v-col cols="12" sm="6">
-        <v-text-field
-          solo
-          dense
-          type="text"
-          placeholder="search for student here..."
-          prepend-inner-icon="mdi-magnify"
-        ></v-text-field>
-      </v-col>
+      
       <v-col cols="12" sm="1" class="mt-7">
         <h3>Week</h3>
       </v-col>

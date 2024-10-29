@@ -3,9 +3,20 @@
    <SideBar />
    <NavBar />
    <v-row class="pa-5">
-    <!-- Bar -->
     <v-col cols="12" sm="6">
-      <h3>Performance Tracking</h3>
+        <h2>Performance Tracking</h2>
+      </v-col>
+    <v-col cols="12" sm="6">
+        <v-text-field
+          solo
+          dense
+          type="text"
+          placeholder="search for student here..."
+          prepend-inner-icon="mdi-magnify"
+        ></v-text-field>
+      </v-col>
+      <!-- Bar -->
+    <v-col cols="12" sm="6">
       <v-card class="pa-10 mt-5" outlined>
         <BarChart />
       </v-card>

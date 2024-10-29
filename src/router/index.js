@@ -76,6 +76,12 @@ const routes = [
     component: () => import('../views/lecturer/DashBoard.vue')
   },
 
+  {
+    path: '/lecturer/performance',
+    name: 'lecturerPerformance',
+    component: () => import('../views/lecturer/Performance.vue')
+  },
+
   
 
 
