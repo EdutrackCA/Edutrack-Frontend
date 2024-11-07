@@ -42,9 +42,21 @@ const routes = [
 
   {
     path: '/mobile/student/dashboard',
-    name: 'mobstudentDashboard',
+    name: 'mobStudentDashboard',
     component: () => import('../views/student/mobile/DashBoard.vue')
   },
+
+  {
+    path: '/student/my-courses',
+    name: 'studentCourses',
+    component: () => import('../views/student/Courses.vue')
+  },
+
+  // {
+  //   path: '/mobile/student/my-courses',
+  //   name: 'mobStudentCourses',
+  //   component: () => import('../views/student/mobile/Courses.vue')
+  // },
 
   {
     path: '/student/performance',
@@ -54,7 +66,7 @@ const routes = [
 
   {
     path: '/mobile/student/performance',
-    name: 'mobstudentPerformance',
+    name: 'mobStudentPerformance',
     component: () => import('../views/student/mobile/mobPerf.vue')
   },
 
