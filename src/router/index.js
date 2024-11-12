@@ -52,16 +52,22 @@ const routes = [
     component: () => import('../views/student/Courses.vue')
   },
 
-  // {
-  //   path: '/mobile/student/my-courses',
-  //   name: 'mobStudentCourses',
-  //   component: () => import('../views/student/mobile/Courses.vue')
-  // },
+  {
+    path: '/mobile/student/my-courses',
+    name: 'mobStudentCourses',
+    component: () => import('../views/student/mobile/mobCourses.vue')
+  },
 
   {
     path: '/student/assignments',
     name: 'studentAssignments',
     component: () => import('../views/student/Assignments.vue')
+  },
+
+  {
+    path: '/mobile/student/assignments',
+    name: 'mobStudentAssignments',
+    component: () => import('../views/student/mobile/mobAssignments.vue')
   },
 
   {

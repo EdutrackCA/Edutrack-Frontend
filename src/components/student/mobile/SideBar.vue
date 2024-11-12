@@ -5,8 +5,8 @@
       <v-divider style="border-color: white"></v-divider>
       <v-list color="transparent" class="mt-10">
         <v-list-item class="" link to="/mobile/student/dashboard"><v-icon>mdi-view-dashboard</v-icon></v-list-item>
-        <v-list-item class="mt-6" link to="#"><v-icon>mdi-bookshelf</v-icon></v-list-item>
-        <v-list-item class="mt-6" link to="#"><v-icon>mdi-book</v-icon></v-list-item>
+        <v-list-item class="mt-6" link to="/mobile/student/my-courses"><v-icon>mdi-bookshelf</v-icon></v-list-item>
+        <v-list-item class="mt-6" link to="/mobile/student/assignments"><v-icon>mdi-book</v-icon></v-list-item>
         <v-list-item class="mt-6" link to="/mobile/student/performance"><v-icon>mdi-chart-waterfall</v-icon></v-list-item>
       </v-list>
       <template v-slot:append>
