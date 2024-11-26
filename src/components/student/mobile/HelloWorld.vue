@@ -25,7 +25,7 @@
               </v-card-text>
               <v-layout>
                 <v-flex xs12>
-                  <v-card-text class="text-left">Prof.A.B.Medel</v-card-text>
+                  <v-card-text class="text-left">Engr.Charles</v-card-text>
                   <div class="text-right">
                     <v-progress-circular
                       :value="progressValue"

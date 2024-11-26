@@ -5,6 +5,9 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+
+  // student route
+  
    {
     path: '/student/login',
     name: 'login',
@@ -81,6 +84,8 @@ const routes = [
     name: 'mobStudentPerformance',
     component: () => import('../views/student/mobile/mobPerf.vue')
   },
+
+  // lecturer route
 
   {
     path: '/lecturer/terms-and-condition',

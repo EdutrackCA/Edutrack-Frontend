@@ -1,14 +1,12 @@
 <template>
   <div>
-    <side-bar />
-   
+    <SideBar />
     <v-container>
       <v-layout row class="pa-5">
        <v-flex xs12 class="text-center">
         <NavBar />
        </v-flex>
         <v-flex xs12>
-         
             <h2>Performance Tracking</h2>
         </v-flex>
       </v-layout>

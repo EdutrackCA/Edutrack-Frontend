@@ -1,91 +1,108 @@
 <template>
-  <v-container class="pa-10">
+  <div>
     <SideBar />
-    <div class="courses-section">
-      <v-row class="text-center">
-        <NavBar />
-        <v-col cols="12" sm="6" class="text-left">
-          <h3>My Courses</h3>
-        </v-col>
-        <v-col cols="12" sm="5" class="text-right">
-          <h5 class="font-weight-regular">Sort by A-Z</h5>
-        </v-col>
-        <v-col cols="12" sm="1" class="text-right">
-          <v-btn small v-show="grid" @click="(grid = false), (list = true)"
+    <v-container>
+      <v-layout row class="pa-5">
+        <v-flex xs12 class="text-center">
+          <NavBar />
+        </v-flex>
+        <v-flex xs6>
+          <h3 class="text-left">My Courses</h3>
+        </v-flex>
+        <v-flex xs4>
+          <h5 class="font-weight-regular text-right mt-2">Sort by A-Z</h5>
+        </v-flex>
+        <v-flex xs2 class="text-right">
+          <v-btn
+            class="pa-2"
+            height="30px"
+            x-small
+            v-show="grid"
+            @click="(grid = false), (list = true)"
             ><v-icon>mdi-format-list-bulleted</v-icon></v-btn
           >
-          <v-btn small v-show="list" @click="(grid = true), (list = false)"
+          <v-btn
+            class="pa-2"
+            height="30px"
+            x-small
+            v-show="list"
+            @click="(grid = true), (list = false)"
             ><v-icon>mdi-apps</v-icon></v-btn
           >
-        </v-col>
+        </v-flex>
+      </v-layout>
 
-        <!-- My Courses -->
-        <v-col
-          cols="12"
-          sm="4"
+      <!-- Display Cards in GridView -->
+      <v-layout row class="pa-1">
+        <v-flex
+          xs6
+          class=""
           v-for="(item, index) in items"
           :key="index"
           v-show="grid"
         >
-          <v-card class="ma-2 blue darken-2 clickable-card" flat dark link>
+          <v-card class="blue darken-2 ma-1" flat dark link>
             <v-card-title>ICT 504</v-card-title>
             <v-card-text class="text-left"
               >Introduction To Neural Network</v-card-text
             >
-            <v-row class="mt-10">
-              <v-col cols="12" sm="6">
+            <v-layout class="">
+              <v-flex xs6>
                 <v-card-text class="text-left">Engr. Charles</v-card-text>
-              </v-col>
-              <v-col cols="12" sm="6">
+              </v-flex>
+              <v-flex xs6>
                 <div class="text-center">
                   <v-progress-circular
                     :value="progressValue"
-                    :size="60"
-                    :width="8"
+                    :size="55"
+                    :width="6"
                     color="white"
                   >
                     {{ progressValue }}%
                   </v-progress-circular>
                 </div>
-              </v-col>
-            </v-row>
+              </v-flex>
+            </v-layout>
           </v-card>
-        </v-col>
+        </v-flex>
+      </v-layout>
 
-        <v-col cols="12" sm="12" v-show="list">
-          <v-row class="text-left pa-3">
-            <v-col cols="12" sm="3"> Name </v-col>
+<!-- Display Cards in ListView -->
+<v-layout class="text-left pa-3"  v-show="list">
+            <v-flex xs2><h6 class="">Name</h6></v-flex>
 
-            <v-col cols="12" sm="3"> Title </v-col>
+            <v-flex xs4><h6 class="">Title</h6></v-flex>
 
-            <v-col cols="12" sm="3"> Lecturer's Name </v-col>
+              <v-flex xs3><h6 class="text-center">Lecturer's Name</h6></v-flex>
 
-            <v-col cols="12" sm="3"> Performance Progress </v-col>
-          </v-row>
+              <v-flex xs3><h6 class="text-center">Performance Progress</h6></v-flex>
+</v-layout>
 
-          <v-card
-            class="blue darken-2 pa-5 mt-5"
-            flat
-            dark
-            link
-            v-for="(item, index) in items"
-            :key="index"
-          >
-            <v-row class="text-left">
-              <v-col cols="12" sm="3">
-                <h4>ICT 504</h4>
-              </v-col>
+      <v-layout row class="pa-1">
+        <v-flex
+          xs12
+          class=""
+          v-for="(item, index) in items"
+          :key="index"
+          v-show="list"
+        >
 
-              <v-col cols="12" sm="3">
-                <h4>Introduction To Neural Network</h4>
-              </v-col>
+          <v-card class="blue darken-2 ma-1 pa-2" flat dark link>
+            <v-layout class="">
+              <v-flex xs2>
+                <h6 class="font-weight-regular">ICT 504</h6>
+              </v-flex>
 
-              <v-col cols="12" sm="3">
-                <h4>Engr. Charles</h4>
-              </v-col>
+              <v-flex xs4>
+                <h6 class="font-weight-regular">Introduction To Neural Network</h6>
+              </v-flex>
 
-              <v-col cols="12" sm="3">
-                <h5>{{ progressValue }}%</h5>
+              <v-flex xs3>
+                <h6 class="font-weight-regular text-center">Engr. Charles</h6>
+              </v-flex>
+
+              <v-flex xs3>
+                <h6>{{ progressValue }}%</h6>
                 <div class="text-center">
                   <v-progress-linear
                     :value="progressValue"
@@ -95,20 +112,24 @@
                   >
                   </v-progress-linear>
                 </div>
-              </v-col>
-            </v-row>
+              </v-flex>
+            </v-layout>
           </v-card>
-        </v-col>
-      </v-row>
-    </div>
-  </v-container>
+        </v-flex>
+      </v-layout>
+
+    </v-container>
+  </div>
 </template>
 
 <script>
-import NavBar from "@/components/student/mobile/NavBar.vue";
 import SideBar from "@/components/student/mobile/SideBar.vue";
+import NavBar from "@/components/student/mobile/NavBar.vue";
 export default {
-  components: { SideBar, NavBar },
+  components: {
+    SideBar,
+    NavBar,
+  },
   data() {
     return {
       progressValue: 65,
@@ -165,32 +186,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.clickable-card {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.clickable-card:hover {
-  transform: scale(1.05);
-}
-
-.scrollable-card {
-  height: 300px; /* Fixed height for the card */
-  overflow: auto; /* Hide overflow outside of this height */
-}
-
-.scrollable-content {
-  max-height: 100%; /* Ensures content takes up available height */
-  overflow-y: auto; /* Enables vertical scrolling */
-}
-
-.extra-small-chip {
-  font-size: 8px; /* Adjust font size */
-  height: 15px; /* Set a smaller height */
-  padding: 0 6px; /* Reduce padding */
-  border-radius: 12px; /* Adjust border-radius for a rounded look */
-  color: red;
-}
-</style>
