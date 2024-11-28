@@ -1,8 +1,8 @@
 <template>
   <div>
     <SideBar />
-    <v-container>
-      <v-layout row class="pa-5">
+    <v-container fluid>
+      <v-layout row class="pa-5" wrap>
         <v-flex xs12 class="text-center">
           <NavBar />
         </v-flex>
@@ -33,7 +33,7 @@
       </v-layout>
 
       <!-- Display Cards in GridView -->
-      <v-layout row class="pa-1">
+      <v-layout row class="pa-1" wrap>
         <v-flex
           xs6
           class=""
@@ -46,7 +46,7 @@
             <v-card-text class="text-left"
               >Introduction To Neural Network</v-card-text
             >
-            <v-layout class="">
+            <v-layout class="" wrap>
               <v-flex xs6>
                 <v-card-text class="text-left">Engr. Charles</v-card-text>
               </v-flex>
@@ -68,7 +68,7 @@
       </v-layout>
 
 <!-- Display Cards in ListView -->
-<v-layout class="text-left pa-3"  v-show="list">
+<v-layout class="text-left pa-3"  v-show="list" wrap>
             <v-flex xs2><h6 class="">Name</h6></v-flex>
 
             <v-flex xs4><h6 class="">Title</h6></v-flex>
@@ -78,7 +78,7 @@
               <v-flex xs3><h6 class="text-center">Performance Progress</h6></v-flex>
 </v-layout>
 
-      <v-layout row class="pa-1">
+      <v-layout row class="pa-1" wrap>
         <v-flex
           xs12
           class=""
@@ -88,7 +88,7 @@
         >
 
           <v-card class="blue darken-2 ma-1 pa-2" flat dark link>
-            <v-layout class="">
+            <v-layout class="" wrap>
               <v-flex xs2>
                 <h6 class="font-weight-regular">ICT 504</h6>
               </v-flex>
@@ -186,3 +186,12 @@ export default {
   },
 };
 </script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  
+}</style>
