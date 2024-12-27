@@ -23,28 +23,36 @@
         <v-col
           cols="12"
           sm="4"
-          v-for="(item, index) in items"
-          :key="index"
+          v-for="course in courses"
+          :key="course.id"
           v-show="grid"
         >
-          <v-card class="ma-2 blue darken-2 clickable-card" flat dark link>
-            <v-card-title>ICT 504</v-card-title>
-            <v-card-text class="text-left"
-              >Introduction To Neural Network</v-card-text
-            >
+          <v-card
+            class="ma-2 blue darken-2 clickable-card"
+            flat
+            dark
+            link
+             :to="{ name: 'studentCoursesDetails', params: { course: course }, route: {} }"
+          >
+            <v-card-title>{{ course.title }}</v-card-title>
+            <v-card-text class="text-left">{{
+              course.description
+            }}</v-card-text>
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
-                <v-card-text class="text-left">Engr. Charles</v-card-text>
+                <v-card-text class="text-left">{{
+                  course.lecturer
+                }}</v-card-text>
               </v-col>
               <v-col cols="12" sm="6">
                 <div class="text-center">
                   <v-progress-circular
-                    :value="progressValue"
+                    :value="course.progress"
                     :size="60"
                     :width="8"
                     color="white"
                   >
-                    {{ progressValue }}%
+                    {{ course.progress }}%
                   </v-progress-circular>
                 </div>
               </v-col>
@@ -68,16 +76,17 @@
             flat
             dark
             link
-            v-for="(item, index) in items"
+            :to="`/student/my-courses/${course.id}`"
+            v-for="(course, index) in courses"
             :key="index"
           >
             <v-row class="text-left">
               <v-col cols="12" sm="3">
-                <h4>ICT 504</h4>
+                <h4>{{ course.title }}</h4>
               </v-col>
 
               <v-col cols="12" sm="3">
-                <h4>Introduction To Neural Network</h4>
+                <h4>{{ course.description }}</h4>
               </v-col>
 
               <v-col cols="12" sm="3">
@@ -85,7 +94,7 @@
               </v-col>
 
               <v-col cols="12" sm="3">
-                <h5>{{ progressValue }}%</h5>
+                <h5>{{ course.progress }}%</h5>
                 <div class="text-center">
                   <v-progress-linear
                     :value="progressValue"
@@ -111,54 +120,71 @@ export default {
   components: { SideBar, NavBar },
   data() {
     return {
-      progressValue: 65,
       grid: true,
       list: false,
-      items: [
+      courses: [
         {
-          title: "Card 1",
-          description: "This is the description for card 1.",
-          image: "https://via.placeholder.com/300x140",
+          id: 1,
+          title: "ICT 504",
+          description: "Introduction to Neural Network",
+          lecturer: "Engr. Charles",
+          progress: 25,
         },
         {
-          title: "Card 2",
-          description: "This is the description for card 2.",
-          image: "https://via.placeholder.com/300x140",
+          id: 2,
+          title: "ICT 505",
+          description: "Machine Learning Basics",
+          lecturer: "Engr. Charles",
+          progress: 50,
         },
         {
-          title: "Card 3",
-          description: "This is the description for card 3.",
-          image: "https://via.placeholder.com/300x140",
+          id: 3,
+          title: "ICT 506",
+          description: "Deep Learning Fundamentals",
+          lecturer: "Engr. Charles",
+          progress: 65,
         },
         {
-          title: "Card 4",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 4,
+          title: "ICT 504",
+          description: "Introduction to Neural Network",
+          lecturer: "Engr. Charles",
+          progress: 100,
         },
         {
-          title: "Card 5",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 5,
+          title: "ICT 506",
+          description: "Deep Learning Fundamentals",
+          lecturer: "Engr. Charles",
+          progress: 70,
         },
         {
-          title: "Card 6",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 6,
+          title: "ICT 504",
+          description: "Introduction to Neural Network",
+          lecturer: "Engr. Charles",
+          progress: 90,
         },
         {
-          title: "Card 7",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 7,
+          title: "ICT 505",
+          description: "Machine Learning Basics",
+          lecturer: "Engr. Charles",
+          progress: 20,
         },
         {
-          title: "Card 8",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 8,
+          title: "ICT 504",
+          description: "Introduction to Neural Network",
+          lecturer: "Engr. Charles",
+          progress: 13,
         },
         {
-          title: "Card 9",
-          description: "This is the description for card 4.",
-          image: "https://via.placeholder.com/300x140",
+          id: 9,
+          title: "ICT 505",
+          description: "Machine Learning Basics",
+          lecturer: "Engr. Charles",
+          progress: 65,
         },
       ],
     };

@@ -64,25 +64,109 @@
         <v-col cols="12" class="">
           <h3>Weekly Schedule</h3>
         </v-col>
-      <Schedule />
+          <Schedule />
+      </v-row>
+
+      <!-- Course Management -->
+      <v-row class="pa-5">
+        <v-col cols="12" class="">
+          <h3>Course Management</h3>
+        </v-col>
+        <course-management />
+         
+      </v-row>
+
+      <!-- Assignment Overview -->
+      <v-row class="pa-5">
+        <v-col cols="12" class="">
+          <h3>Assignment Overview</h3>
+        </v-col>
+        <assignment-overview />
       </v-row>
     </div>
   </v-container>
 </template>
 
 <script>
+import AssignmentOverview from './AssignmentOverview.vue';
+import CourseManagement from './CourseManagement.vue';
 import NavBar from "./NavBar.vue";
 import Schedule from './Schedule.vue';
 import SideBar from "./SideBar.vue";
 // import Upload from "./Upload.vue";
 export default {
-  components: { SideBar, NavBar, Schedule  },
+  components: { SideBar, NavBar, Schedule, AssignmentOverview, CourseManagement  },
   data() {
-       return {
-      value: 65,
-      open:true,
-      close:false
+    return {
+      progressValue: 65,
+      items: [
+        {
+          title: "Card 1",
+          description: "This is the description for card 1.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 2",
+          description: "This is the description for card 2.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 3",
+          description: "This is the description for card 3.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 4",
+          description: "This is the description for card 4.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 5",
+          description: "This is the description for card 4.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 6",
+          description: "This is the description for card 4.",
+          image: "https://via.placeholder.com/300x140",
+        },
+        {
+          title: "Card 7",
+          description: "This is the description for card 4.",
+          image: "https://via.placeholder.com/300x140",
+        },
+      ],
     };
   },
 };
 </script>
+
+<style scoped>
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.05);
+}
+
+.scrollable-card {
+  height: 300px; /* Fixed height for the card */
+  overflow: auto; /* Hide overflow outside of this height */
+}
+
+.scrollable-content {
+  max-height: 100%; /* Ensures content takes up available height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.extra-small-chip {
+  font-size: 8px; /* Adjust font size */
+  height: 15px; /* Set a smaller height */
+  padding: 0 6px; /* Reduce padding */
+  border-radius: 12px; /* Adjust border-radius for a rounded look */
+  color: red;
+}
+</style>
+

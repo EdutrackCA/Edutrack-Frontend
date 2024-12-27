@@ -49,10 +49,18 @@ const routes = [
     component: () => import('../views/student/mobile/DashBoard.vue')
   },
 
+ 
   {
     path: '/student/my-courses',
     name: 'studentCourses',
     component: () => import('../views/student/Courses.vue')
+  },
+
+  {
+    path: '/student/my-courses/:id',
+    name: 'studentCoursesDetails',
+    component: () => import('../views/student/CoursesDetails.vue'),
+    props: true,
   },
 
   {

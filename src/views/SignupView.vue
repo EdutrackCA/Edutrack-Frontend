@@ -220,7 +220,7 @@
                 </v-col>
               </v-row>
               <v-action class="px-10">
-                <v-btn text block to="/lecturer/terms-and-condition" v-model="submit"
+                <v-btn text block to="/lecturer/login" v-model="submit"
                   >SignUp</v-btn
                 >
               </v-action>

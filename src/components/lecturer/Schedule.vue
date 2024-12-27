@@ -2,7 +2,7 @@
   <div>
   <v-row class="fill-height">
     <v-col>
-      <v-sheet height="600">
+      <v-sheet height="500" width="68vw">
         <v-calendar
           ref="calendar"
           v-model="today"
