@@ -83,11 +83,20 @@
         </v-col>
         <assignment-overview />
       </v-row>
+
+      <!-- performance tracking -->
+      <v-row class="pa-5">
+        <v-col cols="12" class="">
+          <h3>Performance  Tracking</h3>
+        </v-col>
+        <Performance />
+      </v-row>
     </div>
   </v-container>
 </template>
 
 <script>
+import Performance from './Performance.vue';
 import AssignmentOverview from './AssignmentOverview.vue';
 import CourseManagement from './CourseManagement.vue';
 import NavBar from "./NavBar.vue";
@@ -95,7 +104,7 @@ import Schedule from './Schedule.vue';
 import SideBar from "./SideBar.vue";
 // import Upload from "./Upload.vue";
 export default {
-  components: { SideBar, NavBar, Schedule, AssignmentOverview, CourseManagement  },
+  components: { SideBar, NavBar, Schedule, AssignmentOverview, CourseManagement, Performance  },
   data() {
     return {
       progressValue: 65,

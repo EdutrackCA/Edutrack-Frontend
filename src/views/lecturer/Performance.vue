@@ -105,7 +105,7 @@
 </template>
 
 <script>
-import SideBar from "@/components/student/SideBar.vue";
+import SideBar from "@/components/lecturer/SideBar.vue";
 import BarChart from "@/components/student/BarChart.vue";
 import PieChart from "@/components/student/PieChart.vue";
 export default {
